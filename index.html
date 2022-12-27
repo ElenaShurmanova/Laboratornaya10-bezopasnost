@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <script>
+        function primitiveRoot(a, b){
+            console.log(a + "," + b);
+            while (b){
+                number = a % b;
+                a = b;
+                b = number;
+            }
+
+            if (Math.abs(a) == 1) {
+                console.log(true);
+                return true;
+            }
+        }
+
+        var array = [];
+        var a = +prompt("Модуль");
+
+        for(var b = 0; b < a; b++){
+            if(primitiveRoot(a, b)){
+                array.push(b);
+            }
+        }
+
+        var degree = array.length;
+        alert(degree);
+
+        for(var g = 2; g < a; g++){
+            var res = g ** degree;
+            if(res > a){
+                if(res % a == 1){
+                    alert("Результат вычисления: " + g);
+                    break;
+                }
+            } else{
+                if(result == 1){
+                    alert("Результат вычисления: " + g);
+                    break;
+                }
+            }
+        }
+        </script>
+    <body>
+    </body>
+</html>
